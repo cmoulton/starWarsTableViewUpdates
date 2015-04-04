@@ -48,8 +48,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // add sequels
         movies?.append("The Force Awakens")
-        movies?.append("Episode VIII")
-        movies?.append("Episode IX")
+        movies?.append("Episode 8")
+        movies?.append("Episode 9")
         self.tableView?.insertRowsAtIndexPaths(
           [NSIndexPath(forRow: count - 3, inSection: 0),
             NSIndexPath(forRow: count + 1 - 3, inSection: 0),
@@ -87,6 +87,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
       cell.textLabel!.text = ""
     }
+    
+/*    for name in UIFont.familyNames() {
+      println(name)
+      if let nameString = name as? String
+      {
+        println(UIFont.fontNamesForFamilyName(nameString))
+      }
+    }*/
+    
+    cell.textLabel?.font = UIFont(name: "StarJediOutline", size: 16)
+    
     println("row: \(indexPath.row), title: \(cell.textLabel!.text!)")
     return cell
   }
