@@ -42,23 +42,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       // Add the sequels, even though they don't exist yet
       // use one call to delete and one call to add rows to the tableview
       // so we need to wrap them in beginUpdates()/endUpdates()
-      // add the sequels
       if let count = movies?.count
       {
+        self.tableView?.beginUpdates()
+        
+        // add sequels
         movies?.append("The Force Awakens")
         movies?.append("Episode VIII")
         movies?.append("Episode IX")
-        self.tableView?.insertRowsAtIndexPaths([NSIndexPath(forRow: count, inSection: 0),
-          NSIndexPath(forRow: count+1, inSection: 0),
-          NSIndexPath(forRow: count+2, inSection: 0)], withRowAnimation: .Automatic)
+        self.tableView?.insertRowsAtIndexPaths(
+          [NSIndexPath(forRow: count - 3, inSection: 0),
+            NSIndexPath(forRow: count + 1 - 3, inSection: 0),
+            NSIndexPath(forRow: count + 2 - 3, inSection: 0)],
+          withRowAnimation: .Automatic)
+        
+        // remove prequels
+        movies?.removeAtIndex(0)
+        movies?.removeAtIndex(0)
+        movies?.removeAtIndex(0)
+        self.tableView?.deleteRowsAtIndexPaths(
+        [NSIndexPath(forRow: 0, inSection: 0),
+        NSIndexPath(forRow: 1, inSection: 0),
+        NSIndexPath(forRow: 2, inSection: 0)],
+          withRowAnimation: .Automatic)
+        
+        self.tableView?.endUpdates()
       }
-    }
-    else if (tapCount == 3)
-    {
-      movies?.removeAtIndex(0)
-      movies?.removeAtIndex(0)
-      movies?.removeAtIndex(0)
-      self.tableView?.deleteRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0), NSIndexPath(forRow: 1, inSection: 0), NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: .Automatic)
     }
   }
   
