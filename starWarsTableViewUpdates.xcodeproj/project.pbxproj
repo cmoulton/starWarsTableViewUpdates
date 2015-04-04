@@ -14,6 +14,7 @@
 		CF09FE441AACEC8E000D4200 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF09FE421AACEC8E000D4200 /* LaunchScreen.xib */; };
 		CF09FE501AACEC8E000D4200 /* starWarsTableViewUpdatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09FE4F1AACEC8E000D4200 /* starWarsTableViewUpdatesTests.swift */; };
 		CF56D5021AD0350F00204C12 /* STJEDISE.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CF56D5011AD0350F00204C12 /* STJEDISE.TTF */; };
+		CF56D5041AD0374D00204C12 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF56D5031AD0374D00204C12 /* Starjout.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		CF09FE4E1AACEC8E000D4200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF09FE4F1AACEC8E000D4200 /* starWarsTableViewUpdatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starWarsTableViewUpdatesTests.swift; sourceTree = "<group>"; };
 		CF56D5011AD0350F00204C12 /* STJEDISE.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = STJEDISE.TTF; path = Fonts/star_jedi/stjedise/STJEDISE.TTF; sourceTree = "<group>"; };
+		CF56D5031AD0374D00204C12 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Starjout.ttf; path = Fonts/star_jedi/starjout/Starjout.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				CF09FE401AACEC8E000D4200 /* Images.xcassets */,
 				CF09FE421AACEC8E000D4200 /* LaunchScreen.xib */,
 				CF56D5011AD0350F00204C12 /* STJEDISE.TTF */,
+				CF56D5031AD0374D00204C12 /* Starjout.ttf */,
 				CF09FE371AACEC8E000D4200 /* Supporting Files */,
 			);
 			path = starWarsTableViewUpdates;
@@ -198,6 +201,7 @@
 				CF09FE3F1AACEC8E000D4200 /* Main.storyboard in Resources */,
 				CF09FE441AACEC8E000D4200 /* LaunchScreen.xib in Resources */,
 				CF09FE411AACEC8E000D4200 /* Images.xcassets in Resources */,
+				CF56D5041AD0374D00204C12 /* Starjout.ttf in Resources */,
 				CF56D5021AD0350F00204C12 /* STJEDISE.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
