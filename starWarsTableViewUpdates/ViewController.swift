@@ -11,22 +11,17 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   @IBOutlet weak var tableView: UITableView?
-  var movies:Array<String>?
+  var movies:Array<String>? = ["Star Wars", "The Empire Strikes Back", "A New Hope"]
   var tapCount = 0
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    movies = Array<String>()
-    movies?.append("Star Wars")
-    movies?.append("The Empire Strikes Back")
-    movies?.append("A New Hope")
     
-    let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addPrequels:")
+    let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "buttonTapped:")
     self.navigationItem.rightBarButtonItem = addButton
   }
   
-  func addPrequels(sender: AnyObject) {
+  func buttonTapped(sender: AnyObject) {
     tapCount++
     if (tapCount == 1)
     {
@@ -83,24 +78,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
       cell.textLabel!.text = ""
     }
+    println("row: \(indexPath.row), title: \(cell.textLabel!.text!)")
     return cell
   }
-  
-/*  func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the specified item to be editable.
-    return true
-  }
-  
-  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-      movies.removeObjectAtIndex(indexPath.row)
-      tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-  }*/
-
-
 
 }
 
