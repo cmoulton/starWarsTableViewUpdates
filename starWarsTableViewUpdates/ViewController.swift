@@ -95,8 +95,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         println(UIFont.fontNamesForFamilyName(nameString))
       }
     }*/
-    
-    cell.textLabel?.font = UIFont(name: "StarJediOutline", size: 16)
+
+    let preferredDescriptor = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+    var font = UIFont(name: "StarJediOutline", size: preferredDescriptor.pointSize)
+
+    cell.textLabel?.font = font
     
     println("row: \(indexPath.row), title: \(cell.textLabel!.text!)")
     return cell
